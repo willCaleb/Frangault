@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:text="Menu principal"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_cadastrar"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="8dp"
+        android:text="Cadastrar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <Button
+        android:id="@+id/btn_listar"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        android:text="Listar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <TextView
+        android:id="@+id/txt_titulo_detalhe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:text="DETALHES"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_cadastrar" />
+
+    <TextView
+        android:id="@+id/txt_modelo_desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:text="Modelo:"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toStartOf="@+id/txt_titulo_detalhe"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_titulo_detalhe" />
+
+    <TextView
+        android:id="@+id/txt_detalhe_modelo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:text="Detalhes "
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/txt_modelo_desc"
+        app:layout_constraintStart_toStartOf="@+id/txt_titulo_detalhe"
+        app:layout_constraintTop_toTopOf="@+id/txt_modelo_desc" />
+
+    <TextView
+        android:id="@+id/txt_ano_desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Ano:"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="@+id/txt_modelo_desc"
+        app:layout_constraintTop_toBottomOf="@+id/txt_modelo_desc" />
+
+    <TextView
+        android:id="@+id/txt_detalhe_ano"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Detalhes"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="@+id/txt_detalhe_modelo"
+        app:layout_constraintTop_toBottomOf="@+id/txt_detalhe_modelo" />
+
+    <TextView
+        android:id="@+id/txt_motor_desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Motor:"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="@+id/txt_ano_desc"
+        app:layout_constraintTop_toBottomOf="@+id/txt_ano_desc" />
+
+    <TextView
+        android:id="@+id/txt_detalhes_motor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Detalhes"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="@+id/txt_detalhe_ano"
+        app:layout_constraintTop_toBottomOf="@+id/txt_detalhe_ano" />
+
+</android.support.constraint.ConstraintLayout>

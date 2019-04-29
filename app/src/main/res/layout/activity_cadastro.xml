@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CadastroActivity">
+
+    <TextView
+        android:id="@+id/txt_titulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/cadastro_texto"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="#797C6F"
+        app:layout_constraintEnd_toStartOf="@+id/guideline"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/edit_modelo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:ems="10"
+        android:hint="Modelo"
+        android:inputType="textPersonName"
+        android:textColorHint="@color/cor_texto"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_titulo" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="18dp"
+        android:layout_marginLeft="18dp"
+        app:layout_constraintBottom_toTopOf="@+id/edit_motor"
+        app:layout_constraintStart_toStartOf="@+id/edit_motor"
+        app:layout_constraintTop_toTopOf="@+id/edit_motor" />
+
+    <EditText
+        android:id="@+id/edit_ano"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:ems="10"
+        android:hint="Ano"
+        android:inputType="numberDecimal"
+        android:textColorHint="@color/cor_texto"
+        app:layout_constraintEnd_toStartOf="@+id/edit_motor"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edit_modelo" />
+
+    <EditText
+        android:id="@+id/edit_motor"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="7dp"
+        android:layout_marginRight="7dp"
+        android:ems="10"
+        android:hint="Motor"
+        android:inputType="textPersonName"
+        android:textColorHint="@color/cor_texto"
+        app:layout_constraintBaseline_toBaselineOf="@+id/edit_ano"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline" />
+
+    <ImageView
+        android:id="@+id/btn_enviar"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="42dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img_camera"
+        app:srcCompat="@drawable/icone_enviar_layer" />
+
+    <ImageView
+        android:id="@+id/img_foto"
+        android:layout_width="200dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.523"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edit_ano"
+        app:srcCompat="@drawable/img_nao_disponivel" />
+
+    <Button
+        android:id="@+id/btn_alterar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:text="Alterar Dados"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toStartOf="@+id/guideline"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img_foto" />
+
+    <ImageView
+        android:id="@+id/img_camera"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_alterar"
+        app:layout_constraintEnd_toEndOf="@+id/btn_enviar"
+        app:layout_constraintStart_toStartOf="@+id/btn_enviar"
+        app:layout_constraintTop_toBottomOf="@+id/img_foto"
+        app:srcCompat="@android:drawable/ic_menu_camera" />
+
+    <Button
+        android:id="@+id/btn_excluir"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:text="Excluir"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/img_foto" />
+
+</android.support.constraint.ConstraintLayout>

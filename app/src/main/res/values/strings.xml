@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Frangault</string>
+    <string name="cadastro_texto">Cadastro de Carros</string>
+    <string name="modelo">Modelo</string>
+    <string name="hint_senha">Senha</string>
+    <string name="tirar_foto">Tirar foto</string>
+</resources>
