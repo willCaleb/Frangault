@@ -28,8 +28,8 @@ public class ListaActivity extends AppCompatActivity {
         BancoController crud = new BancoController(getBaseContext());
         final Cursor cursor= crud.carregaDados();
         //arrays que irão receber a lista de dados recebidas do banco
-        String[] nomeCampos =new String[]{CriaBanco.MODELO, CriaBanco.ANO, CriaBanco.MOTOR};
-        int[] idViews = new int[]{R.id.txt_modelo, R.id.txt_ano, R.id.txt_motor};
+        String[] nomeCampos =new String[]{CriaBanco.MODELO, CriaBanco.ANO, CriaBanco.MOTOR, CriaBanco.ID};
+        int[] idViews = new int[]{R.id.txt_modelo, R.id.txt_ano, R.id.txt_motor, R.id.txt_row_id};
 
         //define um adaptador para inserir os dados recebidos dentro do layout activity_row
         SimpleCursorAdapter adaptador =new SimpleCursorAdapter(getBaseContext(), R.layout.activity_row, cursor, nomeCampos, idViews, 0);

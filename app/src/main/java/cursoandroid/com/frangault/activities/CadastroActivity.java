@@ -30,7 +30,7 @@ public class CadastroActivity extends AppCompatActivity {
     private EditText edtAno;
     private EditText edtMotor;
     private TextView txtTitulo;
-    private ImageView btnEnviar;
+    private Button btnEnviar;
     private ImageView imgFoto;
     private Button btnAlterar;
     private Button btnExcluir;
@@ -177,6 +177,7 @@ public class CadastroActivity extends AppCompatActivity {
 
                                 Intent intent = new Intent(CadastroActivity.this, ListaActivity.class);
                                 startActivity(intent);
+                                finish();
                             }else{
                                 limparDados(); // se o modelo não for válido esse método é chamado
                             }
