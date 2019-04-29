@@ -1,4 +1,4 @@
-package cursoandroid.com.frangault;
+package cursoandroid.com.frangault.activities;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -10,8 +10,11 @@ import android.widget.CheckBox;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import cursoandroid.com.frangault.R;
+
 public class LoginActivity extends AppCompatActivity {
 
+    //variáveis da classe LoginActivity
     private TextView login;
     private TextView senha;
     private Button entrar;
@@ -23,13 +26,20 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
+        //define as variáveis pelo ID
         login = findViewById(R.id.edit_login);
         senha = findViewById(R.id.edit_senha);
         gravarDados = findViewById(R.id.checkBox);
         entrar = findViewById(R.id.btn_entrar);
 
+
         conferirPreferencias();
 
+        /*método para fazer login e senha. Ainda não foi implementado uma tabela e nem uma classe de usuários
+          por isso o login e a senha foram definidas diretamente no método. Também insere no arquivo
+          "preferencias" o login e a senha do usuário se ele marcou o campo "Salvar dados"
+          e por fim se o campo "Salvar dados" foi desmarcado os campos login e senha são apagados do arquivo
+        */
         entrar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -63,6 +73,10 @@ public class LoginActivity extends AppCompatActivity {
 
     }
 
+    /*confere se no arquivo "Preferencias" contém os valores de login e senha, se for verdadeiro
+      define os valores dos campos login e senha com os dados de preferência e também define como
+      checado o campo "Salvar dados"
+    */
     public void conferirPreferencias(){
         SharedPreferences sharedPreferences = getSharedPreferences(PREFERENCIAS, 0);
         if(sharedPreferences.contains("login") && sharedPreferences.contains("senha")){

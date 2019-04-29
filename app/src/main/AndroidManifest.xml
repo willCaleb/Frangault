@@ -14,17 +14,17 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-        <activity android:name=".RowActivity"></activity>
-        <activity android:name=".ListaActivity" >
+        <activity android:name=".activities.RowActivity"></activity>
+        <activity android:name=".activities.ListaActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".MainActivity"/>
+                android:value=".activities.MainActivity"/>
         </activity>
-        <activity android:name=".MainActivity" />
-        <activity android:name=".CadastroActivity"/>
+        <activity android:name=".activities.MainActivity" />
+        <activity android:name=".activities.CadastroActivity"/>
 
 
-        <activity android:name=".LoginActivity">
+        <activity android:name=".activities.LoginActivity">
 
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

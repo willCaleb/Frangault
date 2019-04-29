@@ -1,4 +1,4 @@
-package cursoandroid.com.frangault.model;
+package cursoandroid.com.frangault.controller;
 
 
 import android.content.ContentValues;
@@ -7,13 +7,16 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
 public class BancoController {
+    //variáveis da classe BancoController
     private SQLiteDatabase db;
     private CriaBanco banco;
 
+    //construtor da classe BancoController
     public BancoController(Context context){
         banco = new CriaBanco(context);
     }
 
+    //método para fazer os Inserts na tabela
     public String insereDado(String modelo, int ano, String motor){
         ContentValues valores;
         long resultado;
@@ -28,13 +31,15 @@ public class BancoController {
         resultado = db.insert(CriaBanco.TABELA, null, valores);
         db.close();
 
-        if (resultado ==-1)
+        //teste para saber se inseriu
+        if (resultado == -1)
             return "Erro ao inserir registro";
         else {
             return "Inseriu";
         }
     }
 
+    //método para carregar todos os dados da tabela
     public Cursor carregaDados(){
         Cursor cursor;
         String[] campos =  {banco.ID,banco.MODELO, banco.ANO, banco.MOTOR};
@@ -48,6 +53,7 @@ public class BancoController {
         return cursor;
     }
 
+    //método para carregar um elemento da tabela definido pelo ID
     public Cursor carregarDadoById(int id){
         Cursor cursor;
         String[] campos = {banco.ID, banco.MODELO, banco.ANO, banco.MOTOR};
@@ -62,6 +68,7 @@ public class BancoController {
         return cursor;
     }
 
+    //método para alterar um elemento da tabela definido pelo ID
     public void alterarRegistro(int id, String modelo, int ano, String motor){
         ContentValues valores;
         String where;
@@ -78,6 +85,7 @@ public class BancoController {
         db.close();
     }
 
+    //método para deletar um elemento da tabela definido pelo ID
     public void deletar(int id){
         String where = CriaBanco.ID + "=" + id;
         db = banco.getReadableDatabase();
